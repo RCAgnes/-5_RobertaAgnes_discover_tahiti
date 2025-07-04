@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+  background: #00bfa5;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.gallery img {
+  width: 200px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.map {
+  padding: 2rem;
+}
