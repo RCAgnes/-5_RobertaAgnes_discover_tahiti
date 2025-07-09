@@ -8,33 +8,51 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    #map {
+      width: 100%;
+      max-width: 600px;
+      height: 400px;
+      margin: 0 auto;
+      border-radius: 8px;
+      z-index: 1;
+    }
+    .leaflet-container {
+      background: #eaf6fb !important;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
 
   <header>
+    <img src="assets/images/logo.png" alt="Discover Tahiti Logo" class="logo" />
     <h1>Discover Tahiti</h1>
     <p>Your guide to the beauty, culture, and gastronomy of French Polynesia</p>
   </header>
 
   <section class="intro" data-aos="fade-up">
     <h2>Welcome to Tahiti</h2>
+    <img src="assets/images/tahiti-welcome.jpg" alt="Welcome to Tahiti" style="display:block; margin:1rem auto; max-width:350px; border-radius:8px;">
     <p>
       Tahiti, the largest island in French Polynesia, is renowned for its turquoise lagoons, overwater bungalows, and vibrant culture. From lush mountains to crystal-clear beaches, Tahiti offers a tropical paradise with a rich mix of Polynesian and French influences.
     </p>
   </section>
 
-  <section class="culture" data-aos="fade-right">
+  <section class="culture" data-aos="fade-left">
     <h2>Culture and Traditions</h2>
     <p>
       Tahitian culture is deeply rooted in tradition. Tattoos are a sacred practice representing identity and genealogy. Dance is a powerful cultural expression, often performed during ceremonies and festivities. Visitors will also experience the legendary hospitality of the Polynesian people.
     </p>
+    <img src="assets/images/culture.jpg" alt="Tahitian Culture" style="display:block; margin:1rem auto; max-width:350px; border-radius:8px;">
   </section>
 
-  <section class="food" data-aos="fade-left">
+  <section class="food" data-aos="fade-right">
     <h2>Gastronomy</h2>
     <p>
       Tahitian cuisine is a delightful blend of fresh seafood, tropical fruits, and French flavors. One of the most traditional dishes is <strong>Poisson Cru</strong> (raw fish marinated in lime juice and coconut milk). Meals are often served in a relaxed and communal style.
     </p>
+    <img src="assets/images/gastronomy.jpg" alt="Tahitian Gastronomy" style="display:block; margin:1rem auto; max-width:350px; border-radius:8px;">
   </section>
 
   <section class="tips" data-aos="fade-up">
@@ -47,29 +65,80 @@
   <section class="glide" data-aos="fade-up">
     <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides">
-        <li class="glide__slide"><img src="images/tahiti1.jpg" alt="Bora Bora"></li>
-        <li class="glide__slide"><img src="images/tahiti2.jpg" alt="Traditional dance"></li>
-        <li class="glide__slide"><img src="images/tahiti3.jpg" alt="Moorea view"></li>
+        <li class="glide__slide"><img src="assets/images/borabora.webp" alt="Bora Bora"></li>
+        <li class="glide__slide"><img src="assets/images/island.jpg" alt="Traditional dance"></li>
+        <li class="glide__slide"><img src="assets/images/polinisia.jpg" alt="Moorea view"></li>
       </ul>
     </div>
   </section>
 
   <section class="gallery" data-aos="fade-left">
     <h2>Photo Gallery</h2>
-    <a href="images/food.jpg" data-lightbox="tahiti"><img src="images/thumb-food.jpg" alt="Local Food"></a>
-    <a href="images/tattoo.jpg" data-lightbox="tahiti"><img src="images/thumb-tattoo.jpg" alt="Tattoo art"></a>
-    <a href="images/dance.jpg" data-lightbox="tahiti"><img src="images/thumb-dance.jpg" alt="Dance"></a>
+    <div class="glide gallery-glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide"><a href="assets/images/food.jpg" data-lightbox="tahiti"><img src="assets/images/food.jpg" alt="Local Food"></a></li>
+          <li class="glide__slide"><a href="assets/images/tatoo.jpg" data-lightbox="tahiti"><img src="assets/images/tatoo.jpg" alt="Tattoo art"></a></li>
+          <li class="glide__slide"><a href="assets/images/fall.jpg" data-lightbox="tahiti"><img src="assets/images/fall.jpg" alt="Dance"></a></li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section class="map" data-aos="fade-right">
     <h2>Where is Tahiti?</h2>
-    <div id="map" style="height: 400px;"></div>
+    <p style="text-align:center;">Explore the location of Tahiti on the interactive map below.</p>
+    <div id="map"></div>
   </section>
 
-  <script src="js/main.js"></script>
+  <section class="libraries-used" data-aos="fade-up">
+    <h2>JavaScript Libraries Used</h2>
+    <ul>
+      <li><a href="https://glidejs.com/" target="_blank">Glide.js</a> – Slider and carousel</li>
+      <li><a href="https://lokeshdhakar.com/projects/lightbox2/" target="_blank">Lightbox2</a> – Image gallery</li>
+      <li><a href="https://michalsnik.github.io/aos/" target="_blank">AOS (Animate On Scroll)</a> – Scroll animations</li>
+      <li><a href="https://leafletjs.com/" target="_blank">Leaflet</a> – Interactive maps</li>
+    </ul>
+  </section>
+
+  <footer>
+  <p>&copy; 2025 Discover Tahiti. All rights reserved.</p>
+</footer>
+
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init();
+
+    // Initialize Glide.js
+    new Glide('.glide', {
+      type: 'carousel',
+      perView: 1,
+      autoplay: 3000,
+      animationDuration: 800,
+      animationTimingFunc: 'ease-in-out',
+    }).mount();
+
+    // Initialize Lightbox
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    });
+
+    // Initialize Leaflet map
+    var map = L.map('map').setView(-17.6509, -149.4260, 10);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    var marker = L.marker([-17.6509, -149.4260]).addTo(map);
+    marker.bindPopup("<b>Tahiti</b><br>Welcome to Tahiti!").openPopup();
+  </script>
 </body>
 </html>

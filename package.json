@@ -1,16 +1,20 @@
 {
-  "name": "robertaagnes3",
+  "name": "robertaagnes-tahiti",
   "version": "1.0.0",
+  "description": "INM420 JS Libraries assignment – Tahiti travel page",
   "main": "index.js",
   "scripts": {
-    "start": "npm run lite",
-    "lite": "lite-server"
+    "start": "lite-server"
   },
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "lite-server": "^2.6.1"
   },
-  "keywords": []
+  "keywords": [],
+  "lite-server": {
+    "server": {
+      "baseDir": "./public"
+    }
+  }
 }
