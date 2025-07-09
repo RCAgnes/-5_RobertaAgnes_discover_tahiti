@@ -7,6 +7,7 @@ This responsive vacation web page showcases the culture, beauty, and geography o
 2- Lightbox2 – Image gallery
 3- AOS (Animate On Scroll) – Scroll animations
 4- Granim.js – Animated gradient background
+5- Chart.js – Charts and graphs
 
 ## Instructions
 - Clone this repo
