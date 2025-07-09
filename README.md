@@ -3,10 +3,10 @@
 This responsive vacation web page showcases the culture, beauty, and geography of French Polynesia (Tahiti), built with 4 JavaScript libraries.
 
 ## Libraries Used
-1. Glide.js – Image slider for hero section
-2. Lightbox2 – Interactive image gallery
-3. AOS – Animate on Scroll
-4. Leaflet.js – Interactive map with marker
+1- Glide.js – Slider and carousel
+2- Lightbox2 – Image gallery
+3- AOS (Animate On Scroll) – Scroll animations
+4- Granim.js – Animated gradient background
 
 ## Instructions
 - Clone this repo
